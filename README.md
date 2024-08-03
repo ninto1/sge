@@ -71,7 +71,7 @@ dnf install https://repo.almalinux.org/almalinux/9/CRB/x86_64/os/Packages/libtir
 ```
 dnf group install "Development Tools"
 dnf install cmake hwloc-devel libdb-devel motif-devel ncurses-devel openssl-devel pam-devel rsync systemd-devel wget
-dnf install https://dl.rockylinux.org/pub/rocky/9/CRB/x86_64/os/Packages/l/libtirpc-devel-1.3.3-2.el9.x86_64.rpm
+dnf install https://dl.rockylinux.org/pub/rocky/9/CRB/x86_64/os/Packages/l/libtirpc-devel-1.3.3-8.el9_4.x86_64.rpm
 ```
 
 - **Debian Bookworm/Bullseye**, 2024-07-20
