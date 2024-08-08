@@ -32,7 +32,7 @@
 
 package com.sun.grid.security.login;
 
-import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
+import java.util.Base64;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -200,14 +200,14 @@ public class GECATrustManagerLoginModule implements LoginModule {
             return loginSucceeded;
         }
 
-        byte[] message = Base64.decode(messageStr);
+        byte[] message = Base64.getDecoder().decode(messageStr);
         if(message == null) {
             log.log(Level.FINE, "login failed, message is not base 64 encoded");
             log.exiting("GECATrustManagerLoginModule", "login", Boolean.valueOf(loginSucceeded));
             return loginSucceeded;
         }
         
-        byte[] signature = Base64.decode(signatureStr);
+        byte[] signature = Base64.getDecoder().decode(signatureStr);
         if(signature == null) {
             log.log(Level.FINE, "login failed, signature is not base 64 encoded");
             log.exiting("GECATrustManagerLoginModule", "login", Boolean.valueOf(loginSucceeded));
