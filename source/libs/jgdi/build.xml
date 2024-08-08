@@ -923,7 +923,7 @@ ___INFO__MARK_END__-->
             <equals arg1="${sge.src.targetbits}" arg2="TARGET_32BIT"/>
         </condition>
         
-        <condition property="datamodel" value="-d64" else="">
+        <condition property="datamodel" value="" else="">
             <or>
                 <equals arg1="${sge.arch}" arg2="sol-sparc64"/>
                 <equals arg1="${sge.arch}" arg2="solaris64"/>
